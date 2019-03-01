@@ -1,21 +1,90 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        
+        <a class="navbar-brand" href="#">ITmeetups</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Я ищу...">
+          </div>
+          <button type="submit" class="btn btn-default">Поиск</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Настройки</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Профиль <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">че там</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+    <div class="row">
+      <div class="col-sm-4 col-md-3 sidebar pull-left">
+        <div class="mini-submenu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+      <div class="list-group">
+          <a href="#" class="list-group-item">
+              <i class="fa fa-comment-o"></i> Лента
+          </a>
+          <a href="#" class="list-group-item">
+              <i class="fa fa-comment-o"></i> Профиль
+          </a>
+          <a href="#" class="list-group-item">
+              <i class="fa fa-search"></i> Настройки
+          </a>
+          <a href="#" class="list-group-item">
+              <i class="fa fa-user"></i> Создать группу
+          </a>
+      </div>        
+    </div>
+    <div class="col-sm-4 col-md-3"> 
+        <div class="container-fluid pull-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in... <a href="#">Read more</a>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-3 sidebar pull-right">
+        <div class="mini-submenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <i class="fa fa-comment-o"></i> Фильтр событий
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-comment-o"></i> Бла
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-search"></i> Бла бла
+            </a>
+            <a href="#" class="list-group-item">
+                <i class="fa fa-user"></i> бла
+            </a>
+        </div>        
+    </div>
+    </div>
+  </div>
 
 <router-outlet></router-outlet>
