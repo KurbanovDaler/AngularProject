@@ -1,90 +1,67 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<div class="container">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        
-        <a class="navbar-brand" href="#">ITmeetups</a>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Я ищу...">
-          </div>
-          <button type="submit" class="btn btn-default">Поиск</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Настройки</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Профиль <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">че там</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  
-    <div class="row">
-      <div class="col-sm-4 col-md-3 sidebar pull-left">
-        <div class="mini-submenu">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <!-- <link rel="stylesheet" href="app.component.css"> -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script> </script>
+        <!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script> -->
+    </head>
+    <body>
+        <div id="header_div">
+            <header>
+                <div style='color: white; position:absolute; top:20%; left: 20%'>kjuf</div>
+                <div id="search_holder">
+                    <input type="search" id="search"/>
+                </div>
+                <div id="buttons">
+                    <input type="button" value="Sign up" class="entry_buttons" style="border: 0;">
+                    <input type="button" value="Sign in" class="entry_buttons">
+                </div>
+            </header>
         </div>
-      <div class="list-group">
-          <a href="#" class="list-group-item">
-              <i class="fa fa-comment-o"></i> Лента
-          </a>
-          <a href="#" class="list-group-item">
-              <i class="fa fa-comment-o"></i> Профиль
-          </a>
-          <a href="#" class="list-group-item">
-              <i class="fa fa-search"></i> Настройки
-          </a>
-          <a href="#" class="list-group-item">
-              <i class="fa fa-user"></i> Создать группу
-          </a>
-      </div>        
-    </div>
-    <div class="col-sm-4 col-md-3"> 
-        <div class="container-fluid pull-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in... <a href="#">Read more</a>
+        <div id="body">
+            <div id="user_menu">
+                <a style="border-radius: 15px 15px 0px 0px;">Profile</a>
+                <a>test1</a>
+                <a>test2</a>
+                <a>test3</a>
+                <a>test4</a>
+                <a>test5</a>
+            </div>
+            <div id="event_space">
+                <div class="event_box box1">
+                    <input class="more" type="button" value="Подробнее"/>
+                </div>
+                <div class="event_box box2">
+                    <input class="more" type="button" value="Подробнее"/>
+                </div>
+            </div>
+            <div id="filtering_menu">
+                <label>
+                    <input class="filters" type="radio"/>
+                    test1
+                </label>
+                <label>
+                    <input class="filters" type="radio"/>
+                    test2
+                </label>
+                <label>
+                    <input class="filters" type="radio"/>
+                    test3
+                </label>
+                <label>
+                    <input class="filters" type="radio"/>
+                    test4
+                </label>
+                <label>
+                    <input class="filters" type="radio"/>
+                    test5
+                </label>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-4 col-md-3 sidebar pull-right">
-        <div class="mini-submenu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </div>
-        <div class="list-group">
-            <a href="#" class="list-group-item">
-                <i class="fa fa-comment-o"></i> Фильтр событий
-            </a>
-            <a href="#" class="list-group-item">
-                <i class="fa fa-comment-o"></i> Бла
-            </a>
-            <a href="#" class="list-group-item">
-                <i class="fa fa-search"></i> Бла бла
-            </a>
-            <a href="#" class="list-group-item">
-                <i class="fa fa-user"></i> бла
-            </a>
-        </div>        
-    </div>
-    </div>
-  </div>
-
-<router-outlet></router-outlet>
+    </body>
+</html>

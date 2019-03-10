@@ -1,0 +1,176 @@
+body{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    background-image: url("images/lul.png");
+    background-size: 300px 100px;
+    background-repeat: space;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+input{
+    outline: 0;
+}
+#header_div{
+    /* isolation: isolate; */
+    height: 15%;
+    width: 100%;
+    z-index: 1;
+}
+header{
+    position: fixed;
+    background-color: #BF2527;
+    color: white;
+    height: 15%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+header > div{
+    /* position: fixed; */
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+#search_holder{
+    margin-left: 30%;
+    width: 40%;
+}
+#search{
+    border-radius: 30px;
+    border: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #2C3D3D;
+    color: white;
+    text-indent: 20px;
+    font-size: 100%;
+}
+#buttons{
+    width: 15%;
+    float: right;
+}
+.entry_buttons{
+    color: white;
+    border:1px solid white;
+    border-radius: 15px;
+    height: 90%;
+    width: 50%;
+    margin-right: 5%;
+    background-color: #BF2527;
+    transition: all 0.5s ease;
+}
+.entry_buttons:hover{
+    background-color: white;
+    color: black;
+}
+#body{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    background-image: url("images/lul.png");
+    background-size: 300px 100px;
+    background-repeat: space;
+}
+#user_menu{
+    /* float: left; */
+    /* display: inline-block; */
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 20%;
+    height: 70%;
+    position: fixed;
+    /* z-index: 99; */
+    border-radius: 15px;
+    box-shadow: -5px -3px 5px 0px rgba(0, 0 ,0, 0.5);
+    background-color: white;
+}
+#user_menu > a{
+    height: 10%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    display: block;
+    transition: all 0.5s ease;
+}
+#user_menu > a:hover{
+    background-color: grey;
+}
+#event_space{
+    float: left;
+    /* display: inline-block; */
+    padding-top: 1%;
+    margin-left: 30%;
+    width: 40%;
+    height: 100%;
+}
+.event_box{
+    /* margin-left: 15%; */
+    margin-bottom: 10%;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    /* box-shadow: -12px -13px 5px 0px black; */
+    box-shadow: -5px -3px 5px 0px rgba(0,0,0, 0.5);
+    /* z-index: -1; */
+    border-radius: 15px;
+    border: 1px solid white;
+    background-size: auto 100%;
+    background-position: center;
+}
+.box1{
+    background-image:  url("images/tenders.jpg"); 
+}
+.box2{
+    background-image: url("images/hackday.png");
+}
+.more{
+    border: 0;
+    border-radius: 15px;
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+    margin-top: 45%;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+.more:hover{
+    background-color: #BF2527;
+    /* color: white; */
+}
+#filtering_menu{
+    margin-left: 75%;
+    margin-top: 1%;
+    width: 20%;
+    height: 70%;
+    position: fixed;
+    border-radius: 15px;
+    box-shadow: -5px -3px 5px 0px rgba(0, 0 ,0, 0.5);
+    background-color: white;
+}
+#filtering_menu > a{
+    height: 10%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 2%;
+    display: block;
+    transition: all 0.5s ease;
+}
+.filters{
+    /* width: 100%; */
+    /* height: 10%;
+    padding-left: 5%; */
+    display: block;
+    /* padding-top: 10%; */
+    /* padding-bottom: 2%; */
+    /* display: block; */
+    /* transition: all 0.5s ease; */
+}
+/* input[type=radio],
+input.filters {
+  float: left;
+  /* margin: 2px 0 0 2px; */
+/* } */
