@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+
+<html>
+    
+    <head>
+        <title>Home</title>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="header_div">
+            <header>
+                <div id="search_holder">
+                    <input type="search" id="search"/>
+                </div>
+                <div id="buttons">
+                    <!-- <input type="button" value="Sign up" class="entry_buttons" style="border: 0;"> -->
+                    <input type="button" value="Sign out" class="entry_buttons">
+                </div>
+            </header>
+        </div>
+        <div id="body">
+            <div class="container" id = "user-menu">
+                <div class="row profile">                    
+                    <div class="profile-sidebar">
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Daler K
+                            </div>
+                        </div>
+
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                    Overview </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    Account Settings </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                    Upcoming Events </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Help </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>                                       
+                </div>
+            </div>
+            <div id = "event_space">
+                <div class="card detailed_event_box">
+                    <h2>Hackday hackathon</h2>
+                    <h5>Dec 7, 2018</h5>
+                    <div style="height:200px;" class = "box2"> </div>
+                    <br>
+                    <!-- <p>Some info about the event</p> -->
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet risus sapien. Proin semper mi id bibendum aliquam. Praesent euismod erat in lobortis tristique. Nam at ligula vel augue venenatis sollicitudin a id arcu. In ac tempor risus. Cras lacus est, sodales auctor vehicula egestas, sollicitudin non enim. Nunc at scelerisque est. Sed maximus eu tellus vel pulvinar. Sed arcu urna, vehicula eu justo eu, auctor mattis tellus.
+                    </p>
+                    <button type="submit" class="registerbtn">Register</button>
+                    <!-- <a style = "text-align:right">Register for an event</a> -->
+                </div>
+                <div class="comment-box">
+                        <div id="respond">
+                                
+                                  <h3>Leave a Comment</h3>
+                                
+                                  <form id="commentform">
+                                
+                                    <label for="comment" class="required">Your message</label>
+                                    <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+                                
+                                    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+                                    <input name="submit" type="submit" value="Submit comment" />
+                                
+                                  </form>
+                                
+                                </div>
+                </div>
+            </div>
+            <!-- <div id="user_menu">
+                <a style="border-radius: 15px 15px 0px 0px;">Profile</a>
+                <a>test1</a>
+                <a>test2</a>
+                <a>test3</a>
+                <a>test4</a>
+                <a>test5</a>                
+            </div> -->
+            <!-- <div id="event_space">
+                    <div class="event_box box1">
+                        <img src="tenders.jpg"/>
+                    </div>                
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>
