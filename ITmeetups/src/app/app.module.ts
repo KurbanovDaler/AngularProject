@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProfileModule } from './profile/profile.module';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
