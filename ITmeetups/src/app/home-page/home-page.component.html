@@ -12,7 +12,7 @@
 </div>
 <div id="body">
     <div id="user_menu">
-        <table id="menu_table">
+        <table class="menu_table">
             <tr class="menu_table_row">
                 <td>
                     <input value="Профиль" id="profile" class="menu_button" type="button" routerLink="/profile" />
@@ -43,10 +43,49 @@
     </div>
     <div id="main_content">
         <!-- MAKE IT DYNAMICALLY CHANGE COLORS DEPENDING ON A BACKGROUND -->
-        <h1 id="goryachenkoe">Горяченькое:</h1>
+        <h1 id="for_you">Для вас:</h1>
+        <!-- DYNAMICALLY CHANGE THIS IMAGE DEPENDING ON RECOMENDATIONS -->
         <input value="Подробнее" class="about_event" type="button" routerLink="/aboutEvent" />
     </div>
-    <!-- <div id="filters"> -->
-
-    <!-- </div> -->
+    <div id="filters">
+        <table class="menu_table">
+            <tr class="menu_table_row">
+                <td style="text-align: center;">
+                    <label>Фильтры рекомендаций</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input value="test" class="menu_button" type="button" routerLink="/profile" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input value="test" class="menu_button" type="button" routerLink="/profile" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input value="test" class="menu_button" type="button" routerLink="/profile" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- FIX -->
+                    <input value="test" id="last" class="menu_button" type="button" routerLink="/profile" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="page_divider">
+        <div id="label_holder">
+            <label id="hot">Горячее:</label>
+        </div>
+    </div>
+    <!-- COMING SOON UNDER DEVELOPMENT -->
+    <div id="content">
+        <label>Coming soon</label>
+        <!-- <div id="another_main_content"> -->
+        <!-- </div> -->
+    </div>
 </div>
