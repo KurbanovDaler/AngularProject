@@ -1,1 +1,213 @@
-/* You can add global styles to this file, and also import other style files */
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+input{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+#header{
+    width: 100%;
+    height: 15%;
+    background-color: #BF2527;
+}
+#logo_container{
+    position: absolute;
+    display: inline-flex;
+    width: 15%;
+    height: inherit;
+    align-items: center;
+}
+#logo{
+    margin-left: 20%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+}
+#logo:visited{
+    color: white;
+}
+#search_container{
+    height: inherit;
+    width: 33%;
+    position: absolute;
+    display: inline-flex;
+    margin-left: 33%;
+    align-items: center;
+}
+#search{
+    border-radius: 30px;
+    border: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #2C3D3D;
+    color: white;
+    text-indent: 20px;
+    font-size: 100%;
+}
+#register_login_button_container{
+    height: inherit;
+    width: 20%;
+    position: absolute;
+    display: inline-flex;
+    float: right;
+    margin-left: 80%;
+    align-items: center;
+}
+.entry_buttons{
+    height: 80%;
+    width: 40%;
+    margin-right: 10%;
+    border:1px solid white;
+    border-radius: 15px;
+    background-color: #BF2527;
+    transition: all 0.5s ease;
+}
+#login{
+    color: white;
+}
+#login:hover{
+    color: black;
+    background-color: white;
+}
+#register{
+    color: black;
+    background-color: white;
+}
+#register:hover{
+    color: white;
+    background-color: #BF2527;
+}
+#body{
+    position: absolute;
+    background-color: lightslategrey;
+    height: 100%;
+    width: 100%;
+}
+#user_menu{
+    margin-top: 5%;
+    display: inline-flex;
+    float: left;
+    background-color: white;
+    width: 20%;
+    height: 50%;
+    margin-left: 5%;
+    border-radius: 5px;
+    z-index: 99;
+}
+.menu_table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+.menu_table_row{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+}
+.menu_button{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+.menu_button:hover{
+    background-color: #DDDDDD;
+}
+#profile{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* FIX */
+#last{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#main_content{
+    margin-top: 5%;
+    margin-left: 5%;
+    display: inline-flex;
+    float: left;
+    background-color: white;
+    background-image: url("assets/a.png");
+    background-size: 100% 100%;
+    width: 40%;
+    height: 50%;
+    border-radius: 5px;
+}
+#for_you{
+    position: absolute;
+    margin-left: 2%;
+    max-height: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about_event{
+    width: 33%;
+    height: 20%;
+    margin-top: 45%;
+    margin-left: 33%;
+    border: 0;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    background-color: #BF2527;
+    color: white;
+}
+.about_event:hover{
+    background-color: #2C3D3D;
+}
+
+#filters{
+    margin-top: 5%;
+    margin-left: 5%;
+    display: inline-flex;
+    background-color: white;
+    width: 20%;
+    height: 50%;
+    border-radius: 5px;
+}
+#page_divider{
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background-color: #BF2527;
+    margin-top: 5%;
+    /* text-align: center; */
+}
+#label_holder{
+    width: 10%;
+    margin-left: 46%;
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+#hot{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    color: white;
+}
+#content{
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+}
+#another_main_content{
+    margin-top: 5%;
+    margin-left: 5%;
+    display: inline-flex;
+    float: left;
+    background-color: white;
+    background-size: 100% 100%;
+    width: 40%;
+    height: 50%;
+    border-radius: 5px;
+}
