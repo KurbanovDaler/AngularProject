@@ -92,12 +92,13 @@ a:visited{
     width: 100%;
 }
 #user_menu{
+    position: relative;
     margin-top: 5%;
     display: inline-flex;
     float: left;
     background-color: white;
     width: 20%;
-    height: 50%;
+    height: 35%;
     margin-left: 5%;
     border-radius: 5px;
     z-index: 99;
@@ -140,7 +141,7 @@ a:visited{
     background-image: url("assets/a.png");
     background-size: 100% 100%;
     width: 40%;
-    height: 50%;
+    height: 35%;
     border-radius: 5px;
 }
 #for_you{
@@ -170,7 +171,7 @@ a:visited{
     display: inline-flex;
     background-color: white;
     width: 20%;
-    height: 50%;
+    height: 35%;
     border-radius: 5px;
 }
 #page_divider{
