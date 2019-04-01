@@ -38,11 +38,26 @@
 #table_holder{
     height: 35%;
     width: 100%;
+    display: inline-flex;
+    float: left;
 }
 #event_table{
     height: 100%;
-    width: 50%;
+    width: 70%;
+    border-collapse: collapse;
 }
 .event_description{
-    height: 30%;
+    width: 50%;
+}
+#inputs_holder{
+    width: 30%;
+    display: inline-flex;
+    float: left;
+    justify-content: center;
+}
+/* .input_cell{
+    height: 100%;
+} */
+.event_input{
+    width: 100%;
 }
