@@ -52,21 +52,15 @@
 #inputs_holder{
     width: 30%;
     height: 100%;
-    /* display: inline-flex; */
     float: left;
     text-align: center;
-    /* justify-content: center; */
-    /* table-layout: fixed; */
 }
 tbody{
     width: 100%;
     height: 100%;
 }
-/* .input_cell{
-    b */
-/* } */
 .event_input{
-    width: 70%;
+    width: 100%;
     height: 30%;
     border: 0;
     border-radius: 5px;
@@ -75,6 +69,5 @@ tbody{
     transition: all 0.5s ease;
 }
 .event_input:hover{
-    background-color: grey;
-    /* color: black; */
+    background-color: #2C3D3D;
 }
