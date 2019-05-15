@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SessionService } from '../session.service'
+import { IPost } from '../interfaces'
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  public posts: IPost[];
+
+  constructor(
+      public backend: SessionService
+  ) { }
     
   ngOnInit() {
       console.log('chchchchc');
+  }
+
+  getPosts() {
+    this.backend.getPosts().then(res => { this.posts = res });
   }
 
 }
