@@ -5,7 +5,7 @@ Daler Kurbanov - RomulusGwelt
 
 Maxat Sangerbayev - Paydaylight
 
-Denis Markitanov - atqwerty
+~~Denis Markitanov - atqwerty~~
 
 Rustembek Tatlymuratov - Rustembek
 # Project

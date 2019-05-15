@@ -191,6 +191,7 @@ class LikeView(APIView):
         else:            
             new_like.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)                    
+        # You're not supposed to get here tbh
         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
     def get(self, request, pk):

@@ -1,5 +1,6 @@
 ITmeetups_back/venv
 .idea/
+ITmeetups-front/node_modules
 __pycache__
 ITmeetups_front/node_modules
 
