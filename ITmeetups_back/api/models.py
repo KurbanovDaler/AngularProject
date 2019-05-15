@@ -6,7 +6,12 @@ from django.contrib.auth.models import User, UserManager
 class Post(models.Model):
     title = models.CharField(max_length=400)
     text = models.CharField(max_length=5000)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now=True)
 
 
-
+class Comment(models.Model):
+    text = models.CharField(max_length=400)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now=True)
