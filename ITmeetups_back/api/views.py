@@ -150,15 +150,13 @@ class CommentView(APIView):
         return Response(status=status.HTTP_403_FORBIDDEN)
 
 
-
-
 @api_view(['POST'])
 def login(request):
     serializer = AuthTokenSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     user = serializer.validated_data['user']
     token, created = Token.objects.get_or_create(user=user)
-    return Response({'Token': token.key})
+    return Response({'token': token.key})
 
 
 @api_view(['POST'])
