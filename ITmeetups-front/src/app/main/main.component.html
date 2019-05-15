@@ -1,5 +1,7 @@
-<ng-container *ngFor="let post of posts">
-    <h1>{{post.title}}</h1>
-    <p>{{post.text}}</p>
-    <p>{{post.created_at}}</p>
+<ng-container class="ui placeholder segment" *ngFor="let post of posts">
+    <div class=>
+        <h1>{{post.title}}</h1>
+        <p>{{post.text}}</p>
+        <p>{{post.created_at | date:'yyyy-MM-dd HH:mm'}}</p>
+    </div>
 </ng-container>
