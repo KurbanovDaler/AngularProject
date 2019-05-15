@@ -10,15 +10,21 @@ class CurrentUserSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
+    # user = CurrentUserSerializer()
     user = CurrentUserSerializer
 
     class Meta:
         model = Post
         fields = ('id', 'title', 'text', 'user', 'created_at')
 
+
 class CommentSerializer(serializers.ModelSerializer):
+    # user = CurrentUserSerializer()
+    # post = PostSerializer()
+
     user = CurrentUserSerializer
     post = PostSerializer
+
     class Meta:
         model = Comment
         fields = ('id', 'text', 'user', 'post', 'created_at')

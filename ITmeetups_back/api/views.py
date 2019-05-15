@@ -10,6 +10,7 @@ from .models import Post, Comment
 from rest_framework.decorators import api_view
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from django.http import Http404
+from django.shortcuts import get_object_or_404
 # Create your views here.
 
 
@@ -78,31 +79,75 @@ class PostDetailView(APIView):
 #         })
 
 
-class CommentView(APIView):
+class CommentViewDetailed(APIView):
     permission_classes = (IsAuthenticated, )
 
-    def get_object(self, id):
+    def get_comment(self, id):
         try:
             return Comment.objects.get(id=id)
-        except Comment.DoesNotExist:
+        except Post.DoesNotExist:
+            raise Http404
+
+    def get_post(self, id):
+        try:
+            return Post.objects.get(id=id)
+        except Post.DoesNotExist:
             raise Http404
 
     def get(self, request, pk):
-        comment = self.get_object(pk)
+        post = self.get_post(pk)
+        comment = Comment.objects.all().filter(post=post)
         serializer = CommentSerializer(comment, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def get(self, request):
-        comment = Comment.objects.all()
-        serializer = CommentSerializer(comment, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-    def post(self, request):
+    def post(self, request, pk):
         serializer = CommentSerializer(data=request.data)
+        # serializer.initial_data.update({'user': request.user.id})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class CommentView(APIView):
+    permission_classes = (IsAuthenticated, )
+
+    def get_comment(self, id):
+        try:
+            return Comment.objects.get(id=id)
+        except Post.DoesNotExist:
+            raise Http404
+
+    def get_post(self, id):
+        try:
+            return Post.objects.get(id=id)
+        except Post.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, ck):
+        post = self.get_post(pk)
+        # comment = self.get_comment(ck)
+        #comment =
+        comment = get_object_or_404(Comment.objects.all().filter(post=post)[ck-1:ck])
+        # comment = Comment.objects.all().filter(post=post)
+        serializer = CommentSerializer(comment)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    # def get(self, request):
+    #     comment = Comment.objects.all(filter(Post = request.post))
+    #     serializer = CommentSerializer(comment, many=True)
+    #     return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request, pk, ck):
+        post = self.get_post(pk)
+        comment = get_object_or_404(Comment.objects.all().filter(post=post)[ck-1:ck])
+        if comment.user.id == request.user.id:
+            serializer = CommentSerializer(instance=comment, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+            return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(status=status.HTTP_403_FORBIDDEN)
 
 
 
