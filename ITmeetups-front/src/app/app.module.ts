@@ -10,6 +10,8 @@ import { MainComponent } from './main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { SessionComponent } from './session/session.component';
+import {FormsModule} from '@angular/forms';
+import {SuiModule} from 'ng2-semantic-ui';
 
 const appRoutes: Routes = [
     { path :'login', component: SessionComponent},
@@ -29,7 +31,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    SuiModule
   ],
   providers: [SessionService, {
     provide: HTTP_INTERCEPTORS,

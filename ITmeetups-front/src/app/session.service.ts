@@ -17,4 +17,8 @@ export class SessionService extends MainService {
       password: password 
     });
   }
+
+  getPosts(){
+      return this.get('http://localhost:8000/api/posts/', {});
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../session.service'
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
@@ -14,14 +14,15 @@ export class SessionComponent implements OnInit {
   public password: string;
   public token: string;
   constructor(
-      public backend: SessionService
+      public backend: SessionService,
+      public router: Router
   ) { }
 
   ngOnInit() {
     this.token = localStorage.getItem('token');
 
     if(this.token){
-        
+        this.router.navigate(['posts'])
     }
   }
 
@@ -29,5 +30,9 @@ export class SessionComponent implements OnInit {
       this.backend.getMe(this.username, this.password).then(res => {
         localStorage.setItem('token', res.token)
       });
+  }
+
+  getPosts(){
+      this.backend
   }
 }

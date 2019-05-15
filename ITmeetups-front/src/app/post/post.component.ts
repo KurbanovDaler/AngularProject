@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
 
   constructor() { }
-
+    
   ngOnInit() {
+      console.log('chchchchc');
   }
 
 }
