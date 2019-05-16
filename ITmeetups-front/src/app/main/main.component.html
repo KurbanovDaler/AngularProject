@@ -1,3 +1,17 @@
+<div class="ui segment container">
+    <div class="ui form">
+        <div class="field">
+            <label>Add post</label>
+            <input class="ui input" placeholder="Title" [(ngModel)]="title">
+        </div>
+        <div class="field">
+            <textarea [(ngModel)]="post"></textarea>
+        </div>
+        <div class="field">
+            <button class="ui green button fluid" (click)="addPost()">Post</button>
+        </div>
+    </div>
+</div>
 <ng-container class="ui container" *ngFor="let post of posts">
     <div (click)="getPost(post.id)" class="ui segment container" style="margin: 10px 20px 0px 20px">
         <h1>{{post.title}}</h1>

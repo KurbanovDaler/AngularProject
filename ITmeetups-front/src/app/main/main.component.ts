@@ -11,7 +11,8 @@ import { IPost } from '../interfaces'
 export class MainComponent implements OnInit {
   
   public posts: IPost[];
-
+  public post: string;
+  public title: string;
   constructor(
       public backend: SessionService,
       public router: Router
@@ -22,12 +23,21 @@ export class MainComponent implements OnInit {
   }
 
   getPosts() {
-    this.backend.getPosts().then(res => { this.posts = res });
+    this.backend.getPosts().then(res => { 
+        this.posts = res 
+        this.posts.reverse()
+    });
   }
 
   getPost(id: number) {
     // this.backend.getPost(id).then(res => { this.router.navigate[`posts/${id}`]})
     this.router.navigate(['/posts', id]);
+  }
+
+  addPost(){
+      this.backend.createPost(this.title, this.post, parseInt(localStorage.getItem('user_id'))).then( res => { 
+          location.reload() 
+      });
   }
 
 }

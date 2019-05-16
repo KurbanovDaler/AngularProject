@@ -37,4 +37,12 @@ export class SessionService extends MainService {
         user: user 
     } );
   }
+
+  createPost(title: string, text: string, user: number){
+    return this.post(`http://localhost:8000/api/posts/`, {
+        title: title,
+        text: text,
+        user: user
+    });
+  }
 }
