@@ -1,7 +1,7 @@
-<ng-container class="ui placeholder segment" *ngFor="let post of posts">
-    <div class=>
+<ng-container class="ui container" *ngFor="let post of posts">
+    <div (click)="getPost(post.id)" class="ui segment container" style="margin: 10px 20px 0px 20px">
         <h1>{{post.title}}</h1>
-        <p>{{post.text}}</p>
-        <p>{{post.created_at | date:'yyyy-MM-dd HH:mm'}}</p>
+        <p style="text-align: center">{{post.text}}</p>
+        <p style="text-align: right">by {{post.user.username}} on {{post.created_at | date:'yyyy-MM-dd HH:mm'}}</p>
     </div>
 </ng-container>

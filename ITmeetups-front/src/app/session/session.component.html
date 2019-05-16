@@ -1,7 +1,15 @@
-<ng-container class="ui segment" style="margin: 10px 20px 0px 20px">
-    <div class="ui input">
-        <input type="text" placeholder="Enter username" [(ngModel)]="username">
-        <input type="password" placeholder="Enter password" [(ngModel)]="password">
-        <button class="ui blue button" (click)="Login()">Login</button>
-    </div>
-</ng-container>
+<div class="ui segment container" style="margin: 10px 20px 0px 20px"> 
+    <ng-container >
+        <div class="ui form">
+            <div class="field">
+                <input type="text" placeholder="Enter username" [(ngModel)]="username">
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Enter password" [(ngModel)]="password">
+            </div>
+            <div class="field">
+                <button class="ui blue button fluid" (click)="Login()">Login</button>    
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ITmeetups-front';
+
+
+  isLoggedIn(){
+      return 'token' in localStorage;
+  }
+
+  logout() {
+    if(localStorage.getItem('token')){
+      localStorage.removeItem('token');
+    }
+  }
 }

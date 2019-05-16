@@ -29,8 +29,13 @@ export class SessionComponent implements OnInit {
   Login(){
       this.backend.getMe(this.username, this.password).then(res => {
         localStorage.setItem('token', res.token)
+        localStorage.setItem('user_id', res.user_id)
         this.router.navigate(['posts'])
       });
+  }
+
+  Logout(){
+
   }
 
   getPosts(){

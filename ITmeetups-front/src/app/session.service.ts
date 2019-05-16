@@ -21,4 +21,20 @@ export class SessionService extends MainService {
   getPosts(){
       return this.get('http://localhost:8000/api/posts/', {});
   }
+
+  getPost(id: number) {
+      return this.get(`http://localhost:8000/api/posts/${id}/`, {});
+  }
+
+  getComments(id: number){
+      return this.get(`http://localhost:8000/api/posts/${id}/comments/`, {});
+  }
+
+  createComment(text: string, post: number, user: number){
+    return this.post(`http://127.0.0.1:8000/api/posts/1/comments/`, { 
+        text: text, 
+        post: post, 
+        user: user 
+    } );
+  }
 }

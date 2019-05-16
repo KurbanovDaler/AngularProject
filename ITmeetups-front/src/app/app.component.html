@@ -1,6 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-    <h1>ITmeetups</h1>
+
+<div class="ui block header">
+    <div class="ui two column grid">
+        <div class="row">
+            <div routerLink="/posts">
+                <h1 style="margin-left: 10px">ITmeetups</h1>
+            </div>
+            <div style="margin-left: 80%" *ngIf="isLoggedIn()">
+                <button class="ui blue button" (click)="logout()" routerLink="/login">Logout</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 

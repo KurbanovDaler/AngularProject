@@ -1,5 +1,23 @@
-<ng-container *ngFor="let post of posts">
-    <h1>{{post.title}}</h1>
-    <p>{{post.text}}</p>
-    <p>{{post.created_at}}</p>
+<ng-container class="ui segment">
+    <div class="ui segment container">
+        <h1>{{post.title}}</h1>
+        <p style="text-align: center">{{post.text}}</p>
+        <p style="text-align: right"> by {{post.user.username}} on {{post.created_at | date:'yyyy-MM-dd HH:mm'}}</p>
+    
+        <div class="ui form">
+            <div class="field">
+                <label>Add comment</label>
+                <textarea [(ngModel)]="comment_text"></textarea>
+            </div>
+            <div class="field">
+                <button class="ui green button fluid" (click)="addComment()">Comment</button>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngFor="let comment of comments">
+            <div class="ui segment container">
+                <h2>{{comment.user.username}}</h2>
+                <p>{{comment.text}}</p>
+            </div>
+        </ng-container>
 </ng-container>
